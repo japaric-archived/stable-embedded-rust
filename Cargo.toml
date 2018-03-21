@@ -1,0 +1,10 @@
+[package]
+name = "stable-embedded-rust"
+version = "0.1.0"
+authors = ["Jorge Aparicio <jorge@japaric.io>"]
+
+[dev-dependencies]
+glue = { path = "glue" }
+sh = { path = "sh" }
+
+[workspace]
