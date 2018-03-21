@@ -8,6 +8,7 @@ matrix:
         apt:
           packages:
             - gcc-arm-none-eabi
+            - newlib-arm-none-eabi
 
     - env: TARGET=thumbv7m-none-eabi
       rust: nightly
@@ -15,6 +16,7 @@ matrix:
         apt:
           packages:
             - gcc-arm-none-eabi
+            - newlib-arm-none-eabi
 
     - env: TARGET=thumbv7em-none-eabi
       rust: nightly
@@ -22,6 +24,7 @@ matrix:
         apt:
           packages:
             - gcc-arm-none-eabi
+            - newlib-arm-none-eabi
 
     - env: TARGET=thumbv7em-none-eabihf
       rust: nightly
@@ -29,6 +32,7 @@ matrix:
         apt:
           packages:
             - gcc-arm-none-eabi
+            - newlib-arm-none-eabi
 
 before_install: set -e
 
