@@ -4,39 +4,20 @@ matrix:
   include:
     - env: TARGET=thumbv6m-none-eabi
       rust: nightly
-      addons:
-        apt:
-          packages:
-            - gcc-arm-none-eabi
-            - libnewlib-arm-none-eabi
 
     - env: TARGET=thumbv7m-none-eabi
       rust: nightly
-      addons:
-        apt:
-          packages:
-            - gcc-arm-none-eabi
-            - libnewlib-arm-none-eabi
 
     - env: TARGET=thumbv7em-none-eabi
       rust: nightly
-      addons:
-        apt:
-          packages:
-            - gcc-arm-none-eabi
-            - libnewlib-arm-none-eabi
 
     - env: TARGET=thumbv7em-none-eabihf
       rust: nightly
-      addons:
-        apt:
-          packages:
-            - gcc-arm-none-eabi
-            - libnewlib-arm-none-eabi
 
 before_install: set -e
 
 install:
+  - export PATH="$(pwd)/gcc-arm-none-eabi-7-2017-q4-major/bin:$PATH"
   - bash ci/install.sh
 
 script:
