@@ -1,0 +1,45 @@
+language: rust
+
+matrix:
+  include:
+    - env: TARGET=thumbv6m-none-eabi
+      rust: nightly
+
+    - env: TARGET=thumbv7m-none-eabi
+      rust: nightly
+
+    - env: TARGET=thumbv7em-none-eabi
+      rust: nightly
+
+    - env: TARGET=thumbv7em-none-eabihf
+      rust: nightly
+
+before_install: set -e
+
+install:
+  - export PATH="$(pwd)/gcc-arm-none-eabi-7-2017-q4-major/bin:$PATH"
+  - bash ci/install.sh
+
+script:
+  - bash ci/script.sh
+
+after_script: set +e
+
+cache:
+  cargo: true
+  directories:
+    - $HOME/.xargo
+
+before_cache:
+  # Travis can't cache files that are not readable by "others"
+  - chmod -R a+r $HOME/.cargo
+
+branches:
+  only:
+    - master
+    - staging
+    - trying
+
+notifications:
+  email:
+    on_success: never

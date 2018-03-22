@@ -2,6 +2,8 @@
 rustflags = [
   "-C", "link-arg=-Tlink.x",
   "-C", "link-arg=-nostartfiles",
+  "-C", "link-arg=-march=armv6s-m",
+  "-C", "link-arg=-mthumb",
 ]
 
 [target.thumbv7m-none-eabi]
@@ -9,18 +11,26 @@ runner = "arm-none-eabi-gdb" # Not required; just used for testing
 rustflags = [
   "-C", "link-arg=-Tlink.x",
   "-C", "link-arg=-nostartfiles",
+  "-C", "link-arg=-march=armv7-m",
+  "-C", "link-arg=-mthumb",
 ]
 
 [target.thumbv7em-none-eabi]
 rustflags = [
   "-C", "link-arg=-Tlink.x",
   "-C", "link-arg=-nostartfiles",
+  "-C", "link-arg=-march=armv7e-m",
+  "-C", "link-arg=-mthumb",
 ]
 
 [target.thumbv7em-none-eabihf]
 rustflags = [
   "-C", "link-arg=-Tlink.x",
   "-C", "link-arg=-nostartfiles",
+  "-C", "link-arg=-march=armv7e-m",
+  "-C", "link-arg=-mfloat-abi=hard",
+  "-C", "link-arg=-mfpu=fpv4-sp-d16",
+  "-C", "link-arg=-mthumb",
 ]
 
 [build]
