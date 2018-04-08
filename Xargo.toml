@@ -1,8 +1,0 @@
-# This file is NOT required to build most examples
-# it's just used for some forward compatibility tests
-[dependencies.core]
-stage = 0
-
-[dependencies.compiler_builtins]
-features = ["mem"]
-stage = 1
