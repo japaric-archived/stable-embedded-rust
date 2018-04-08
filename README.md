@@ -30,14 +30,11 @@ For more details about how and why this differs from [`cortex-m-rt`] check the [
 
 This doesn't work on stable *yet*.
 
-There are three (\*) unstable features that still tie this experiment to stable: the `panic_fmt`
-lang item, the `compiler_builtins` crate and Xargo. We hope that we'll have stable replacement for
-those by the time the 2018 edition is released.
+There's only one unstable features that still ties this experiment to nightly: the `panic_fmt`
+lang item. We hope that we'll have [stable replacement] for it by the time the 2018 edition is
+released.
 
-(\*) There's a stable workaround for the unstable `compiler_builtins` crate and that's linking to
-`libgcc.a` and `libc.a`. Unfortunately that workaround is not forward compatible with the idea of
-having the compiler intrinsics being provided by the `core` crate, which is the most likely solution
-to the existence of the unstable `compiler_builtins` crate. cf. `examples/{intrinsics,mem}-cb.rs`
+[stable replacement]: https://github.com/rust-lang/rust/issues/44489
 
 ## License
 

@@ -11,11 +11,11 @@ main() {
     )
 
     for ex in "${examples[@]}"; do
-        xargo build --target $TARGET --example $ex
+        cargo build --target $TARGET --example $ex
 
-        xargo build --target $TARGET --example $ex --release
+        cargo build --target $TARGET --example $ex --release
 
-        xargo rustc --target $TARGET --example $ex --release -- -C lto
+        cargo rustc --target $TARGET --example $ex --release -- -C lto
     done
 
     set +x
