@@ -8,6 +8,6 @@ glue = { path = "glue" }
 sh = { path = "sh" }
 
 [profile.release]
-opt-level = s
+opt-level = "s"
 
 [workspace]
