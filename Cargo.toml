@@ -7,4 +7,7 @@ authors = ["Jorge Aparicio <jorge@japaric.io>"]
 glue = { path = "glue" }
 sh = { path = "sh" }
 
+[profile.release]
+opt-level = "s"
+
 [workspace]

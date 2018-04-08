@@ -41,7 +41,6 @@ macro_rules! main {
 }
 
 #[link(name = "c")]
-#[link(name = "gcc")]
 extern "C" {
     fn nmi();
     fn hard_fault();
