@@ -40,7 +40,6 @@ macro_rules! main {
     };
 }
 
-#[link(name = "c")]
 extern "C" {
     fn nmi();
     fn hard_fault();
