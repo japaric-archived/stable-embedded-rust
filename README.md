@@ -1,3 +1,11 @@
+# Status
+
+This crate is an old **EXPERIMENT** and has been archived. All the goodies have
+landed in upstream cortex-m-rt and Cortex-M development is possible on the
+stable as of Rust 1.30.
+
+-- @japaric, 2018-12-08
+
 # `stable-embedded-rust`
 
 > The closest we are to embedded no-std binaries on stable Rust
